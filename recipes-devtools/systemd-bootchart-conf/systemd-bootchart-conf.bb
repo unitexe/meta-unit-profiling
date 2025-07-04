@@ -7,8 +7,7 @@ SRC_URI = "\
     file://unit.conf \
 "
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_install() {
     install -D -p -m0644 ${UNPACKDIR}/unit.conf ${D}${sysconfdir}/systemd/bootchart.conf.d/unit.conf
